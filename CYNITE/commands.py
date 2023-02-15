@@ -22,10 +22,10 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('??? ?? ?? ???? ?????', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                   ],[
-                    InlineKeyboardButton('??????s', url='https://t.me/Bamel_Backup'),
-                    InlineKeyboardButton('s??????', url='https://t.me/Bamel_Backup')
+                    InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/Bamel_Backup'),
+                    InlineKeyboardButton('sᴜᴘᴘᴏʀᴛ', url='https://t.me/Bamel_Backup')
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         kd = await message.reply_photo(
@@ -45,12 +45,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-                    InlineKeyboardButton('??? ?? ?? ???? ?????', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                   ],[
-                    InlineKeyboardButton('????', callback_data='help'),
-                    InlineKeyboardButton('?????', callback_data='about'),
+                    InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
                   ],[
-                    InlineKeyboardButton('s??s????? ??? ?? ???????', url="https://www.youtube.com/@BamelMoviesOfficial")
+                    InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ ᴏᴜʀ ʏᴛ ᴄʜᴀɴɴᴇʟ', url="https://www.youtube.com/@BamelMoviesOfficial")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -70,7 +70,7 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "? J??? O?? C?????? ?", url=invite_link.invite_link
+                    "❆ Jᴏɪɴ Oᴜʀ Cʜᴀɴɴᴇʟ ❆", url=invite_link.invite_link
                 )
             ]
         ]
@@ -79,9 +79,9 @@ async def start(client, message):
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("? T?? A????", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("? T?? A????", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("↻ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
         await client.send_photo(
             photo="https://telegra.ph/file/a4c2c5d8a999b47970227.jpg",
             chat_id=message.from_user.id,
@@ -92,12 +92,12 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-                    InlineKeyboardButton('??? ?? ?? ???? ?????', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
                   ],[
-                    InlineKeyboardButton('????', callback_data='help'),
-                    InlineKeyboardButton('?????', callback_data='about'),
+                    InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
+                    InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
                   ],[
-                    InlineKeyboardButton('s??s????? ??? ?? ???????', url="https://www.youtube.com/@BamelMoviesOfficial")
+                    InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ ᴏᴜʀ ʏᴛ ᴄʜᴀɴɴᴇʟ', url="https://www.youtube.com/@BamelMoviesOfficial")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -149,8 +149,8 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('S?????? G????', url=GRP_LNK),
-                          InlineKeyboardButton('U?????s C??????', url=CHNL_LNK)
+                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ]
                         ]
                     )
@@ -166,8 +166,8 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('S?????? G????', url=GRP_LNK),
-                          InlineKeyboardButton('U?????s C??????', url=CHNL_LNK)
+                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                        ]
                         ]
                     )
@@ -235,8 +235,8 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                      [
-                      InlineKeyboardButton('S?????? G????', url=GRP_LNK),
-                      InlineKeyboardButton('U?????s C??????', url=CHNL_LNK)
+                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
                    ]
                     ]
                 )
@@ -276,8 +276,8 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
              [
-              InlineKeyboardButton('S?????? G????', url=GRP_LNK),
-              InlineKeyboardButton('U?????s C??????', url=CHNL_LNK)
+              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=GRP_LNK),
+              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
            ]
             ]
         )
@@ -294,7 +294,7 @@ async def channel_info(bot, message):
     else:
         raise ValueError("Unexpected type of CHANNELS")
 
-    text = '?? ?????????????? ???????????????? ????????\n'
+    text = '📑 𝗜𝗡𝗗𝗘𝗫𝗘𝗗 𝗖𝗛𝗔𝗡𝗡𝗘𝗟𝗦 𝗟𝗜𝗦𝗧\n'
     for channel in channels:
         chat = await bot.get_chat(channel)
         if chat.username:
@@ -302,7 +302,7 @@ async def channel_info(bot, message):
         else:
             text += '\n' + chat.title or chat.first_name
 
-    text += f'\n\n?????????? {len(CHANNELS)}'
+    text += f'\n\n𝗧𝗢𝗧𝗔𝗟 {len(CHANNELS)}'
 
     if len(text) < 4096:
         await message.reply(text)
@@ -327,7 +327,7 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("Processing...?", quote=True)
+        msg = await message.reply("Processing...⏳", quote=True)
     else:
         await message.reply('Reply to file with /delete which you want to delete', quote=True)
         return
@@ -403,7 +403,7 @@ async def delete_all_index_confirm(bot, message):
 async def settings(client, message):
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"**Y??? A?? A???????s A????. Us? /settings I? PM**")
+        return await message.reply(f"**Yᴏᴜʀ Aʀᴇ Aɴᴏɴʏᴍᴏᴜs Aᴅᴍɪɴ. Usᴇ /settings Iɴ PM**")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -414,10 +414,10 @@ async def settings(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("**M??? S??? I'? P??s??? I? Y??? G???? !!**", quote=True)
+                await message.reply_text("**Mᴀᴋᴇ Sᴜʀᴇ I'ᴍ Pʀᴇsᴇɴᴛ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ !!**", quote=True)
                 return
         else:
-            await message.reply_text("**I'? N?? C???????? T? A?? G????s !**", quote=True)
+            await message.reply_text("**I'ᴍ Nᴏᴛ Cᴏɴɴᴇᴄᴛᴇᴅ Tᴏ Aɴʏ Gʀᴏᴜᴘs !**", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -456,102 +456,102 @@ async def settings(client, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    'F????? B?????',
+                    'Fɪʟᴛᴇʀ Bᴜᴛᴛᴏɴ',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'S?????' if settings["button"] else 'D?????',
+                    'Sɪɴɢʟᴇ' if settings["button"] else 'Dᴏᴜʙʟᴇ',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'F??? M???',
+                    'Fɪʟᴇ Mᴏᴅᴇ',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'S????' if settings["botpm"] else 'C??????',
+                    'Sᴛᴀʀᴛ' if settings["botpm"] else 'Cʜᴀɴɴᴇʟ',
                     callback_data=f'setgs#botpm#{settings["botpm"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'F??? S?????',
+                    'Fɪʟᴇ Sᴇᴄᴜʀᴇ',
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'E?????' if settings["file_secure"] else 'D?s????',
+                    'Eɴᴀʙʟᴇ' if settings["file_secure"] else 'Dɪsᴀʙʟᴇ',
                     callback_data=f'setgs#file_secure#{settings["file_secure"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'I??? P?s???',
+                    'Iᴍᴅʙ Pᴏsᴛᴇʀ',
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'E?????' if settings["imdb"] else 'D?s????',
+                    'Eɴᴀʙʟᴇ' if settings["imdb"] else 'Dɪsᴀʙʟᴇ',
                     callback_data=f'setgs#imdb#{settings["imdb"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'S???? C????',
+                    'Sᴘᴇʟʟ Cʜᴇᴄᴋ',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'E?????' if settings["spell_check"] else 'D?s????',
+                    'Eɴᴀʙʟᴇ' if settings["spell_check"] else 'Dɪsᴀʙʟᴇ',
                     callback_data=f'setgs#spell_check#{settings["spell_check"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'W?????? Ms?',
+                    'Wᴇʟᴄᴏᴍᴇ Msɢ',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'E?????' if settings["welcome"] else 'D?s????',
+                    'Eɴᴀʙʟᴇ' if settings["welcome"] else 'Dɪsᴀʙʟᴇ',
                     callback_data=f'setgs#welcome#{settings["welcome"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'A??? F?????',
+                    'Aᴜᴛᴏ Fɪʟᴛᴇʀ',
                     callback_data=f'setgs#auto_ffilter#{settings["auto_ffilter"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'E?????' if settings["auto_ffilter"] else 'D?s????',
+                    'Eɴᴀʙʟᴇ' if settings["auto_ffilter"] else 'Dɪsᴀʙʟᴇ',
                     callback_data=f'setgs#auto_ffilter#{settings["auto_ffilter"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'A??? F????? D??',
+                    'Aᴜᴛᴏ Fɪʟᴛᴇʀ Dᴇʟ',
                     callback_data=f'setgs#auto_delete#{settings["auto_delete"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'E?????' if settings["auto_delete"] else 'D?s????',
+                    'Eɴᴀʙʟᴇ' if settings["auto_delete"] else 'Dɪsᴀʙʟᴇ',
                     callback_data=f'setgs#auto_delete#{settings["auto_delete"]}#{grp_id}',
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    'F?????s A??? D??',
+                    'Fɪʟᴛᴇʀs Aᴜᴛᴏ Dᴇʟ',
                     callback_data=f'setgs#mauto_delete#{settings["mauto_delete"]}#{grp_id}',
                 ),
                 InlineKeyboardButton(
-                    'E?????' if settings["mauto_delete"] else 'D?s????',
+                    'Eɴᴀʙʟᴇ' if settings["mauto_delete"] else 'Dɪsᴀʙʟᴇ',
                     callback_data=f'setgs#mauto_delete#{settings["mauto_delete"]}#{grp_id}',
                 ),
             ],
             [
-                InlineKeyboardButton('C??s? S??????s', callback_data='close_data')
+                InlineKeyboardButton('Cʟᴏsᴇ Sᴇᴛᴛɪɴɢs', callback_data='close_data')
             ]
         ]
 
         reply_markup = InlineKeyboardMarkup(buttons)
         stng = await message.reply_text(
-            text=f"<u><b>C?????? S??????s F?? {title}</b></u>\n\n<b>H?? B???? H??? Y?? C?? C????? S??????s As Y??? W?s? B? Us??? B???? B?????s</b>",
+            text=f"<u><b>Cᴜʀʀᴇɴᴛ Sᴇᴛᴛɪɴɢs Fᴏʀ {title}</b></u>\n\n<b>Hᴇʏ Bᴜᴅᴅʏ Hᴇʀᴇ Yᴏᴜ Cᴀɴ Cʜᴀɴɢᴇ Sᴇᴛᴛɪɴɢs As Yᴏᴜʀ Wɪsʜ Bʏ Usɪɴɢ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴs</b>",
             reply_markup=reply_markup,
             disable_web_page_preview=True,
             parse_mode=enums.ParseMode.HTML,
@@ -563,10 +563,10 @@ async def settings(client, message):
 
 @Client.on_message(filters.command('set_template'))
 async def save_template(client, message):
-    sts = await message.reply("**C??????? T???????....**")
+    sts = await message.reply("**Cʜᴇᴄᴋɪɴɢ Tᴇᴍᴘʟᴀᴛᴇ....**")
     userid = message.from_user.id if message.from_user else None
     if not userid:
-        return await message.reply(f"**Y??? A?? A???????s A????. Us? /set_template I? PM**")
+        return await message.reply(f"**Yᴏᴜʀ Aʀᴇ Aɴᴏɴʏᴍᴏᴜs Aᴅᴍɪɴ. Usᴇ /set_template Iɴ PM**")
     chat_type = message.chat.type
 
     if chat_type == enums.ChatType.PRIVATE:
@@ -577,10 +577,10 @@ async def save_template(client, message):
                 chat = await client.get_chat(grpid)
                 title = chat.title
             except:
-                await message.reply_text("**M??? S??? I'? P??s??? I? Y??? G???? !!**", quote=True)
+                await message.reply_text("**Mᴀᴋᴇ Sᴜʀᴇ I'ᴍ Pʀᴇsᴇɴᴛ Iɴ Yᴏᴜʀ Gʀᴏᴜᴘ !!**", quote=True)
                 return
         else:
-            await message.reply_text("**I'? N?? C???????? T? A?? G????s !**", quote=True)
+            await message.reply_text("**I'ᴍ Nᴏᴛ Cᴏɴɴᴇᴄᴛᴇᴅ Tᴏ Aɴʏ Gʀᴏᴜᴘs !**", quote=True)
             return
 
     elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
@@ -599,15 +599,15 @@ async def save_template(client, message):
         return
 
     if len(message.command) < 2:
-        return await sts.edit("**G??? M? T??????? !!**")
+        return await sts.edit("**Gɪᴠᴇ Mᴇ Tᴇᴍᴘʟᴀᴛᴇ !!**")
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
-    await sts.edit(f"**S????ss????? C?????? T??????? F?? `{title}` T?**\n\n`{template}`")
+    await sts.edit(f"**Sᴜᴄᴄᴇssғᴜʟʟʏ Cʜᴀɴɢᴇᴅ Tᴇᴍᴘʟᴀᴛᴇ Fᴏʀ `{title}` Tᴏ**\n\n`{template}`")
 
 @Client.on_message((filters.regex("#request")) & filters.chat(chats=SUPPORT_GROUP))
 async def request(bot, message):
     if message.text in ['#request']:
-        await message.reply_text(text = '<code>?????? ?????????????? ????????????...</code>', quote = True)
+        await message.reply_text(text = '<code>𝚄𝚂𝙴 𝙲𝙾𝚁𝚁𝙴𝙲𝚃 𝙵𝙾𝚁𝙼𝙰𝚃...</code>', quote = True)
         return
     grqmsg = await message.reply_text(
             text=script.REQUEST2_TXT,
@@ -617,10 +617,10 @@ async def request(bot, message):
     rqmsg = await bot.send_message(RQST_LOG_CHANNEL, script.REQUEST_TXT.format(message.text.replace("#request", ""), message.from_user.mention, message.from_user.id),
         reply_markup=InlineKeyboardMarkup( 
            [[
-               InlineKeyboardButton(text="?? G? T? T?? M?ss??? ??", url=f"{message.link}")
+               InlineKeyboardButton(text="🔍 Gᴏ Tᴏ Tʜᴇ Mᴇssᴀɢᴇ 🔎", url=f"{message.link}")
            ],
            [
-               InlineKeyboardButton(text="?? S??? O?????s ??", callback_data=f"morbtn {message.id} {grqmsg.id}")
+               InlineKeyboardButton(text="🉐 Sʜᴏᴡ Oᴘᴛɪᴏɴs 🉐", callback_data=f"morbtn {message.id} {grqmsg.id}")
            ]] 
            )
         )
@@ -628,7 +628,7 @@ async def request(bot, message):
     await grqmsg.edit_reply_markup(
         reply_markup=InlineKeyboardMarkup( 
            [[ 
-               InlineKeyboardButton(text="?? V??? Y??? R?o??s? ??", url=f"{rqmsg.link}")
+               InlineKeyboardButton(text="‼️ Vɪᴇᴡ Yᴏᴜʀ Rᴇǫᴜᴇsᴛ ‼️", url=f"{rqmsg.link}")
            ]] 
            )
         )
@@ -654,13 +654,13 @@ async def send_msg(bot, message):
             await message.reply_to_message.copy(int(user.id))
             success = True
         except Exception as e:
-            await message.reply_text(f"<b>E???? :- <code>{e}</code></b>")
+            await message.reply_text(f"<b>Eʀʀᴏʀ :- <code>{e}</code></b>")
         if success:
-            await message.reply_text(f"<b>Y??? M?ss??? H?s B??? S???ss????? S??? To {user.mention}.</b>")
+            await message.reply_text(f"<b>Yᴏᴜʀ Mᴇssᴀɢᴇ Hᴀs Bᴇᴇɴ Sᴜᴄᴇssғᴜʟʟʏ Sᴇɴᴅ To {user.mention}.</b>")
         else:
-            await message.reply_text("<b>A? E???? O??????? !</b>")
+            await message.reply_text("<b>Aɴ Eʀʀᴏʀ Oᴄᴄᴜʀʀᴇᴅ !</b>")
     else:
-        await message.reply_text("<b>C?????? I?????????...</b>")
+        await message.reply_text("<b>Cᴏᴍᴍᴀɴᴅ Iɴᴄᴏᴍᴘʟᴇᴛᴇ...</b>")
 
 @Client.on_message(filters.command("gsend") & filters.user(ADMINS))
 async def send_chatmsg(bot, message):
@@ -676,10 +676,10 @@ async def send_chatmsg(bot, message):
             await message.reply_to_message.copy(int(chat.id))
             success = True
         except Exception as e:
-            await message.reply_text(f"<b>E???? :- <code>{e}</code></b>")
+            await message.reply_text(f"<b>Eʀʀᴏʀ :- <code>{e}</code></b>")
         if success:
-            await message.reply_text(f"<b>Y??? M?ss??? H?s B??? S???ss????? S??? To {chat.id}.</b>")
+            await message.reply_text(f"<b>Yᴏᴜʀ Mᴇssᴀɢᴇ Hᴀs Bᴇᴇɴ Sᴜᴄᴇssғᴜʟʟʏ Sᴇɴᴅ To {chat.id}.</b>")
         else:
-            await message.reply_text("<b>A? E???? O??????? !</b>")
+            await message.reply_text("<b>Aɴ Eʀʀᴏʀ Oᴄᴄᴜʀʀᴇᴅ !</b>")
     else:
-        await message.reply_text("<b>C?????? I?????????...</b>")
+        await message.reply_text("<b>Cᴏᴍᴍᴀɴᴅ Iɴᴄᴏᴍᴘʟᴇᴛᴇ...</b>")
