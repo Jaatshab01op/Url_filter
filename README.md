@@ -53,7 +53,7 @@
 
 ## Credits 
 
-* [![Bamel Bots](https://img.shields.io/static/v1?label=KDBotz&message=Telegram&color=critical)](https://t.me/Bamel_Shab)
+* [![Bamel Bots](https://img.shields.io/static/v1?label=BamelBots&message=Telegram&color=critical)](https://t.me/Bamel_Shab)
 * [![Contact](https://img.shields.io/static/v1?label=Contact&message=On+Telegram&color=critical)](https://t.me/Bamel_Shab)
 
 ## Deploy 
