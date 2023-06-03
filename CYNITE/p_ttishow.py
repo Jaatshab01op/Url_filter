@@ -44,7 +44,7 @@ async def save_group(bot, message):
             return
         buttons = [[
                     InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url=CHNL_LNK),
-                    InlineKeyboardButton('ʀᴇᴘᴏʀᴛ ʜᴇʀᴇ', url=f"https://t.me/CyniteSupport")
+                    InlineKeyboardButton('ʀᴇᴘᴏʀᴛ ʜᴇʀᴇ', url=f"https://t.me/Bamel_Movie_Support")
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -64,7 +64,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply_photo(
-                photo="https://telegra.ph/file/5c586e00f34665267ab5b.jpg",
+                photo="https://graph.org/file/1d95be2adf45df28a4d52.jpg",
                 caption=f"<b>🔖 ʜᴇʟʟᴏ ᴍʏ ғʀɪᴇɴᴅ {u.mention},</b>\n<b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {message.chat.title} !</b>\n\n<b>ʀᴇᴀᴅ ɢʀᴏᴜᴘ ʀᴜʟᴇs ᴛᴏ ᴋɴᴏᴡ ᴍᴏʀᴇ...</b>",
                 reply_markup=InlineKeyboardMarkup(buttons))
                 await asyncio.sleep(60)
