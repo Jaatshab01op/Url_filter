@@ -107,9 +107,9 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'ɪɴfᴏ', 'reqinfo'),
                     InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
                 ]
             )
 
@@ -117,8 +117,8 @@ async def next_page(bot, query):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo'),
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfoo')
+                    InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+                    InlineKeyboardButton(f'ɪɴfᴏ', 'reqinfoo')
                 ]
             )
                 
@@ -129,9 +129,9 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'ɪɴfᴏ', 'reqinfo'),
                     InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
                 ]
             )
 
@@ -139,8 +139,8 @@ async def next_page(bot, query):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo'),
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfoo')
+                    InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+                    InlineKeyboardButton(f'ɪɴfᴏ', 'reqinfoo')
                 ]
             )
 
@@ -533,8 +533,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('ᴍᴀɴᴜᴀʟ ꜰɪʟᴛᴇʀ', callback_data='manuelfilter'),
-            InlineKeyboardButton('ᴀᴜᴛᴏ ꜰɪʟᴛᴇʀ', callback_data='autofilter')
+            InlineKeyboardButton('ᴍᴀɴᴜᴀʟ fɪʟᴛᴇʀ', callback_data='manuelfilter'),
+            InlineKeyboardButton('ᴀᴜᴛᴏ fɪʟᴛᴇʀ', callback_data='autofilter')
         ], [
             InlineKeyboardButton('ᴄᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
             InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', callback_data='cynite_filstr')
@@ -553,7 +553,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('ʀᴇᴘᴏʀᴛ ʙᴜɢs & ꜰᴇᴇᴅʙᴀᴄᴋ', url=GRP_LNK)
+            InlineKeyboardButton('ʀᴇᴘᴏʀᴛ ʙᴜɢs & fᴇᴇᴅʙᴀᴄᴋ', url=GRP_LNK)
         ],[
             InlineKeyboardButton('ʙᴀᴄᴋᴜᴘ ᴄʜᴀɴɴᴇʟ', url="https://t.me/Bamel_Backup")
         ],[
@@ -943,9 +943,9 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'ɪɴfᴏ', 'reqinfo'),
                     InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
                 ]
             )
 
@@ -953,8 +953,8 @@ async def auto_filter(client, msg, spoll=False):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo'),
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfoo')
+                    InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+                    InlineKeyboardButton(f'ɪɴfᴏ', 'reqinfoo')
                 ]
             )
                 
@@ -965,9 +965,9 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfo'),
+                    InlineKeyboardButton(f'ɪɴfᴏ', 'reqinfo'),
                     InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo')
+                    InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo')
                 ]
             )
 
@@ -975,8 +975,8 @@ async def auto_filter(client, msg, spoll=False):
             btn.insert(0, 
                 [
                     InlineKeyboardButton(f'ᴍᴏᴠɪᴇ', 'minfo'),
-                    InlineKeyboardButton(f'ꜱᴇʀɪᴇꜱ', 'sinfo'),
-                    InlineKeyboardButton(f'ɪɴꜰᴏ', 'reqinfoo')
+                    InlineKeyboardButton(f'sᴇʀɪᴇs', 'sinfo'),
+                    InlineKeyboardButton(f'ɪɴfᴏ', 'reqinfoo')
                 ]
             )
 
