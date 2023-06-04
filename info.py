@@ -48,14 +48,14 @@ SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Bamel_Movie_Support')
 MSG_ALRT = environ.get('MSG_ALRT', 'Share and Support Us')
 
 # Custom Chats
-SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', -1001744731800))
-FILE_CHANNEL = int(environ.get('FILE_CHANNEL', -1001868005435))
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001744731800'))
+FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1001868005435'))
 FILE_CHANNEL_LINK = environ.get('FILE_CHANNEL_LINK', 'https://t.me/Bamel_Backup')
 HOW_DWLD_LINK = environ.get('HOW_DWLD_LINK', 'https://t.me/Bamel_Backup/8')
 
 # Log Channels
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001543295404))
-RQST_LOG_CHANNEL = int(environ.get('RQST_LOG_CHANNEL', -1001543295404))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001543295404'))
+RQST_LOG_CHANNEL = int(environ.get('RQST_LOG_CHANNEL', '-1001543295404'))
 
 # Bot Options
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
@@ -71,7 +71,7 @@ MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001543295404')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
-PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "True")), False)
+PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
 # Auto Delete , Filter & Auto Filter
@@ -85,8 +85,8 @@ SPL_DELETE_TIME = int(environ.get('SPL_DELETE_TIME', 30))
 
 # URL SHORTNER
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', '')
-URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE',)
+URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API',)
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
