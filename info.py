@@ -85,7 +85,7 @@ SPL_DELETE_TIME = int(environ.get('SPL_DELETE_TIME', 30))
 
 # URL SHORTNER
 
-URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'greymatterslinks.in')
+URL_SHORTENR_WEBSITE = environ.get('URL_SHORTENR_WEBSITE', 'greylinks.in')
 URL_SHORTNER_WEBSITE_API = environ.get('URL_SHORTNER_WEBSITE_API', '1d5e8f7304fef98403b8af62381c5d017aea83bb')
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
