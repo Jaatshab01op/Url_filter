@@ -520,7 +520,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help'),
                     InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
                   ],[
-                    InlineKeyboardButton('sᴜʙsᴄʀɪʙᴇ ᴏᴜʀ ʏᴛ ᴄʜᴀɴɴᴇʟ', url="https://www.youtube.com/@BamelMoviesOfficial")
+                    InlineKeyboardButton('Join Movie Request Channel', url="https://t.me/newnetflixmovies_Premium")
                   ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
